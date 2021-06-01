@@ -1,0 +1,567 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Acwing第一场周赛 | 冯振军的博客</title><meta name="author" content="冯振军,daydream0929@gmail.com"><meta name="copyright" content="冯振军"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="3577.选择数字题目描述给定一个整数数组 A，其包含 n 个正整数 a1,a2,…,an 以及一个整数数组 B，其包含 m 个正整数 b1,b2,…,bm。 请从数组 A 中挑选一个元素 a 并从数组 B 中挑选一个元素 b，使得 a+b 既不包含于 A 也不包含于 B。 例如，如果 A&#x3D;[2,1,7] 而 B&#x3D;[1,3,4]，则可以从 A 中选取 1，从 B 中选取 4，这样得到的数字 1+4">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Acwing第一场周赛">
+<meta property="og:url" content="http://daydream0929.cn/2021/05/29/Acwing%E7%AC%AC%E4%B8%80%E5%9C%BA%E5%91%A8%E8%B5%9B/index.html">
+<meta property="og:site_name" content="冯振军的博客">
+<meta property="og:description" content="3577.选择数字题目描述给定一个整数数组 A，其包含 n 个正整数 a1,a2,…,an 以及一个整数数组 B，其包含 m 个正整数 b1,b2,…,bm。 请从数组 A 中挑选一个元素 a 并从数组 B 中挑选一个元素 b，使得 a+b 既不包含于 A 也不包含于 B。 例如，如果 A&#x3D;[2,1,7] 而 B&#x3D;[1,3,4]，则可以从 A 中选取 1，从 B 中选取 4，这样得到的数字 1+4">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://daydream0929.cn/myself/photo/AcWing.png">
+<meta property="article:published_time" content="2021-05-29T08:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-01T14:32:35.413Z">
+<meta property="article:author" content="冯振军">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://daydream0929.cn/myself/photo/AcWing.png"><link rel="shortcut icon" href="/img/2019.9.28.png"><link rel="canonical" href="http://daydream0929.cn/2021/05/29/Acwing%E7%AC%AC%E4%B8%80%E5%9C%BA%E5%91%A8%E8%B5%9B/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-8065211730145401',
+  enable_page_level_ads: 'true'
+});</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 冯振军","link":"链接: ","source":"来源: 冯振军的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Acwing第一场周赛',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: undefined,
+  isToc: true,
+  postUpdate: '2021-06-01 06:32:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="冯振军的博客" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/2019.9.28.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/playlist/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/myself/photo/AcWing.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">冯振军的博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/playlist/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Acwing第一场周赛</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-05-29T08:00:00.000Z" title="发表于 2021-05-29 00:00:00">2021-05-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-06-01T14:32:35.413Z" title="更新于 2021-06-01 06:32:35">2021-06-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Acwing第一场周赛"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="3577-选择数字"><a href="#3577-选择数字" class="headerlink" title="3577.选择数字"></a>3577.选择数字</h2><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>给定一个整数数组 A，其包含 n 个正整数 a1,a2,…,an 以及一个整数数组 B，其包含 m 个正整数 b1,b2,…,bm。</p>
+<p>请从数组 A 中挑选一个元素 a 并从数组 B 中挑选一个元素 b，使得 a+b 既不包含于 A 也不包含于 B。</p>
+<p>例如，如果 A=[2,1,7] 而 B=[1,3,4]，则可以从 A 中选取 1，从 B 中选取 4，这样得到的数字 1+4=5 既不在 A 中，也不在 B 中。</p>
+<p>但是，我们不能从 A 中选取 2，从 B 中选取 1，因为得到的数字 2+1=3 包含于 B。</p>
+<p>可以证明这样的数对一定存在，如果答案不唯一则输出任意合理答案均可。</p>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含整数 n。</p>
+<p>第二行包含 n 个整数 a1,…,an。</p>
+<p>第三行包含整数 m。</p>
+<p>第四行包含 m 个整数 b1,…,bm。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>共一行，输出 a 和 b，中间用空格隔开。</p>
+<h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>对于 30% 的数据，1≤n,m≤10<br>对于 100% 的数据，1≤n,m≤100,1≤ai,bi≤200</p>
+<h4 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h4><p>1</p>
+<p>20</p>
+<p>2</p>
+<p>10 20</p>
+<h4 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h4><p>20 20</p>
+<h4 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h4><p>3</p>
+<p>3 2 2</p>
+<p>5</p>
+<p>1 5 7 7 9</p>
+<h4 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h4><p>3 1</p>
+<h4 id="输入样例3："><a href="#输入样例3：" class="headerlink" title="输入样例3："></a>输入样例3：</h4><p>4</p>
+<p>1 3 5 7</p>
+<p>4</p>
+<p>7 5 3 1</p>
+<h4 id="输出样例3："><a href="#输出样例3：" class="headerlink" title="输出样例3："></a>输出样例3：</h4><p>1 1</p>
+<h4 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h4><p>这道题数据范围比较小暴力搜索就可以<br>我们这里用个小技巧<br>两次遍历分别找出两个数组A中的最大值x和数组B中的最大值y<br>那么x+y一定即不再A中也不在B中<br>直接输出就可以了</p>
+<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++ 代码"></a>C++ 代码</h4><pre class="language-none"><code class="language-none">#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+const int N &#x3D; 210;
+
+int n,m;
+
+int main()&#123;
+    cin&gt;&gt;n;
+    int x&#x3D;0,y&#x3D;0;
+    for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;
+        int a;
+        cin&gt;&gt;a;
+        x&#x3D;max(x,a);
+    &#125;
+    cin&gt;&gt;m;
+    for(int i&#x3D;1;i&lt;&#x3D;m;i++)&#123;
+        int b;
+        cin&gt;&gt;b;
+        y&#x3D;max(b,y);
+    &#125;
+    cout&lt;&lt;x&lt;&lt;&#39; &#39;&lt;&lt;y&lt;&lt;endl;
+    return 0;
+    
+&#125;</code></pre>
+
+<h2 id="3578-最大中位数"><a href="#3578-最大中位数" class="headerlink" title="3578.最大中位数"></a>3578.最大中位数</h2><h4 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h4><p>给定一个由 n 个整数组成的数组 a，其中 n 为奇数。</p>
+<p>你可以对其进行以下操作：</p>
+<p>选择数组中的一个元素（例如 ai），将其增加 1（即，将其替换为 ai+1）。<br>你最多可以进行 k 次操作，并希望该数组的中位数能够尽可能大。</p>
+<p>奇数长度的数组的中位数是数组以非降序排序后的中间元素。</p>
+<p>例如，数组 [1,5,2,3,5] 的中位数为 3</p>
+<h4 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含两个整数 n 和 k。</p>
+<p>第二行包含 n 个整数 a1,a2,…,an。</p>
+<h4 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h4><p>输出一个整数，表示通过操作可能得到的最大中位数。</p>
+<h4 id="数据范围-1"><a href="#数据范围-1" class="headerlink" title="数据范围"></a>数据范围</h4><p>对于 30% 的数据，1≤n≤5。<br>对于 100% 的数据，1≤n≤2×105，1≤k≤109，1≤ai≤109。</p>
+<h4 id="输入样例1：-1"><a href="#输入样例1：-1" class="headerlink" title="输入样例1："></a>输入样例1：</h4><p>3 2</p>
+<p>1 3 5</p>
+<h4 id="输出样例1：-1"><a href="#输出样例1：-1" class="headerlink" title="输出样例1："></a>输出样例1：</h4><p>5</p>
+<h4 id="输入样例2：-1"><a href="#输入样例2：-1" class="headerlink" title="输入样例2："></a>输入样例2：</h4><p>5 5</p>
+<p>1 2 1 1 1</p>
+<h4 id="输出样例2：-1"><a href="#输出样例2：-1" class="headerlink" title="输出样例2："></a>输出样例2：</h4><p>3</p>
+<h4 id="输入样例3：-1"><a href="#输入样例3：-1" class="headerlink" title="输入样例3："></a>输入样例3：</h4><p>7 7</p>
+<p>4 1 2 4 3 4 4</p>
+<h4 id="输出样例3：-1"><a href="#输出样例3：-1" class="headerlink" title="输出样例3："></a>输出样例3：</h4><p>5</p>
+<hr>
+<h4 id="算法1"><a href="#算法1" class="headerlink" title="算法1"></a>算法1</h4><h4 id="贪心-左右指针-O-nlog-n"><a href="#贪心-左右指针-O-nlog-n" class="headerlink" title="(贪心+左右指针)  $O(nlog n)$"></a>(贪心+左右指针)  $O(nlog n)$</h4><p>这道题首先我们将整个数组<br>然后我们定义一个左右指针l,r<br>定义n=数组大小-1</p>
+<p>左指针l指向中位数所在下标<br>右指针r指向中位数右边(包括中位数本身)最后一个等于中位数的下标 (l&lt;=r&lt;=n) </p>
+<p>这样我们的左右指针就是一个区间</p>
+<p>每次循环我们都把区间内所有的数 +1 这样我们的中位数就 +1 同时 k要减去 r-l+1 </p>
+<p>当 k==0 或者 k&lt;r-l+1 (不够区间内所有值都+1) 的时候循环停止 此时的中位数就是我们要求的中位数</p>
+<h4 id="C-代码-1"><a href="#C-代码-1" class="headerlink" title="C++ 代码"></a>C++ 代码</h4><pre class="language-none"><code class="language-none">#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+const int N &#x3D; 1e6+10;
+
+typedef long long LL;
+
+int n,k;
+int a[N];
+
+int seekR(int q[],int r)&#123;  &#x2F;&#x2F;寻找右端点
+    int res&#x3D;r;
+    int flag&#x3D;0;
+    for(int i&#x3D;r;i&lt;&#x3D;n;i++)&#123;
+        if(q[r]&#x3D;&#x3D;q[i])&#123;
+            continue;
+        &#125;
+        else&#123;
+            flag&#x3D;1;
+            res&#x3D;i-1;
+            break;
+        &#125;
+    &#125;
+    if(flag&#x3D;&#x3D;0)&#123;
+        res&#x3D;n;
+    &#125;
+
+    return res;
+
+&#125;
+
+
+int main()&#123;
+    cin&gt;&gt;n&gt;&gt;k;
+
+    for(int i&#x3D;1;i&lt;&#x3D;n;i++) scanf(&quot;%d&quot;,&amp;a[i]);
+    if(n&#x3D;&#x3D;1)&#123;
+        cout&lt;&lt;k+a[1]&lt;&lt;endl;
+        return 0;
+    &#125;
+    sort(a+1,a+n+1);
+    
+    
+    int l&#x3D;(n&#x2F;2)+1;
+    int r&#x3D;seekR(a,l);
+    int num&#x3D;a[l];
+    
+    while(k &amp;&amp; k&gt;&#x3D;r-l+1)&#123;
+
+        num++;
+        k-&#x3D;r-l+1;
+        a[r]&#x3D;num;
+        r&#x3D;seekR(a,r);
+    &#125;
+
+    cout&lt;&lt;num&lt;&lt;endl;
+ 
+    return 0;
+&#125;</code></pre>
+
+<hr>
+<h4 id="算法2"><a href="#算法2" class="headerlink" title="算法2"></a>算法2</h4><h4 id="二分-O-nlong-n"><a href="#二分-O-nlong-n" class="headerlink" title="(二分)  $O(nlong n)$"></a>(二分)  $O(nlong n)$</h4><p>当时做题的时候并没有想到二分<br>这种方法是参考别人的</p>
+<p>我们每次从 1 到 2e9 中二分查找答案<br>这里解释一下右端点为什么是 2e9 ：<br>因为题目给出的范围 1&lt;=k&lt;=1e9,1&lt;=w[i]&lt;=1e9 如果说k==1e9 n==1 w[0]== 1e9 的时候<br>要找的答案就是1e9+1e9 也就是我们右端点的最大值</p>
+<h4 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h4><p><a target="_blank" rel="noopener" href="https://www.acwing.com/activity/content/code/content/1300036/">https://www.acwing.com/activity/content/code/content/1300036/</a></p>
+<h4 id="C-代码-2"><a href="#C-代码-2" class="headerlink" title="C++ 代码"></a>C++ 代码</h4><pre class="language-none"><code class="language-none">#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;algorithm&gt;
+
+typedef long long LL;
+
+using namespace std;
+
+const int N &#x3D; 2e5+10;
+
+int n,k;
+int w[N];
+
+bool check(int mid)&#123;
+    LL res&#x3D;0;
+    for(int i&#x3D;n&#x2F;2;i&lt;n;i++)&#123;
+        if(w[i]&lt;mid)
+            res+&#x3D;mid-w[i];
+    &#125;
+    return res&lt;&#x3D;k;
+&#125;
+
+int main()&#123;
+    cin&gt;&gt;n&gt;&gt;k;
+    for(int i&#x3D;0;i&lt;n;i++) scanf(&quot;%d&quot;,&amp;w[i]);
+    sort(w,w+n);
+    int l&#x3D;0,r&#x3D;2e9;
+    while(l&lt;r)&#123;
+        int mid&#x3D;(LL)l+r+1&gt;&gt;1;
+        if(check(mid)) l&#x3D;mid;
+        else r&#x3D;mid-1;
+    &#125;
+    printf(&quot;%d\n&quot;,r);
+    return 0;
+&#125;</code></pre>
+
+
+<h2 id="3579-移动数字"><a href="#3579-移动数字" class="headerlink" title="3579.移动数字"></a>3579.移动数字</h2><h3 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h3><p>将 1∼n 按顺序排成一排，构成一个数列。</p>
+<p>数字 i 刚好位于位置 i。</p>
+<p>再给定一个长度为 n 的位置序列 p1,p2,…,pn，它是 1∼n 的一种排列。</p>
+<p>接下来，我们会重复不断地对数列进行如下操作：</p>
+<p>重新排列数列中每个数的位置，将位于位置 i 的数移动至位置 pi。（如果 i=pi 则该数仍移动至位置 i）。<br>每次操作开始时，所有数的移动同时进行，操作结束后，数列将变为一个新的 1∼n 的排列。<br>例如，当 n=6 并且 p=[4,6,1,3,5,2] 时，第一次操作后，数字 1 将移动至位置 4，数字 2 将移动至位置 6，以此类推；第二次操作后，数字 1 将移动至位置 3，数字 2 将移动至位置 2，以此类推。</p>
+<p>你的任务是确定从 1 到 n 的每个数字 i，经过多少次操作后，第一次重新回到位置 i。</p>
+<p>例如，考虑 p=[5,1,2,4,3]，数字 1 的移动轨迹如下：</p>
+<p>第一次操作后，到达位置 5。<br>第二次操作后，到达位置 3。<br>第三次操作后，到达位置 2。<br>第四次操作后，回到位置 1。<br>所以，经过四次操作后，数字 1 第一次回到位置 1。</p>
+<p>值得一提的是，数字 4 经过一次操作后就回到了位置 4.</p>
+<h4 id="输入格式-2"><a href="#输入格式-2" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含整数 T，表示共有 T 组测试数据。</p>
+<p>每组数据第一行包含整数 n。</p>
+<p>第二行包含 n 个整数 p1,…,pn。</p>
+<h4 id="输出格式-2"><a href="#输出格式-2" class="headerlink" title="输出格式"></a>输出格式</h4><p>每组数据输出一行结果，包含 n 个整数，其中第 i 个整数表示数字 i 第一次回到位置 i 所经过的操作次数。</p>
+<p>整数之间用单个空格隔开。</p>
+<h4 id="数据范围-2"><a href="#数据范围-2" class="headerlink" title="数据范围"></a>数据范围</h4><p>对于 30% 的数据，1≤T≤10，1≤n≤10。<br>对于 100% 的数据，1≤T≤1000，1≤n≤2×105，1≤pi≤n。<br>保证 p1∼pn 是 1∼n 的一种排列。<br>保证 ∑n≤2×105（一个输入中的 T 个 n 相加之和不超过 2×105）。</p>
+<h4 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h4><h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><p>6</p>
+<p>5</p>
+<p>1 2 3 4 5</p>
+<p>3</p>
+<p>2 3 1</p>
+<p>6</p>
+<p>4 6 2 1 5 3</p>
+<p>1</p>
+<p>1</p>
+<p>4</p>
+<p>3 4 1 2</p>
+<p>5</p>
+<p>5 1 2 4 3</p>
+<h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><p>1 1 1 1 1 </p>
+<p>3 3 3 </p>
+<p>2 3 3 2 1 3 </p>
+<p>1 </p>
+<p>2 2 2 2 </p>
+<p>4 4 4 1 4 </p>
+<hr>
+<h3 id="算法1-1"><a href="#算法1-1" class="headerlink" title="算法1"></a>算法1</h3><h5 id="并查集求连通块个数"><a href="#并查集求连通块个数" class="headerlink" title="(并查集求连通块个数)"></a>(并查集求连通块个数)</h5><h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h4><p><a target="_blank" rel="noopener" href="https://www.acwing.com/activity/content/code/content/1300090/">https://www.acwing.com/activity/content/code/content/1300090/</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/839/">https://www.acwing.com/problem/content/839/</a></p>
+<h4 id="C-代码-3"><a href="#C-代码-3" class="headerlink" title="C++ 代码"></a>C++ 代码</h4><pre class="language-none"><code class="language-none">#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+const int N &#x3D; 200010;
+
+int n,T;
+int p[N],s[N];
+
+int find(int x)&#123;  &#x2F;&#x2F;并查集+路径压缩
+    if(p[x]!&#x3D;x) p[x]&#x3D;find(p[x]);
+    return p[x];
+&#125;
+
+int main()&#123;
+    cin&gt;&gt;T;
+    while(T--)&#123;
+        cin&gt;&gt;n;
+        for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;  &#x2F;&#x2F;初始化
+            p[i]&#x3D;i;
+            s[i]&#x3D;1;
+        &#125;
+        for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;
+            int j;
+            cin&gt;&gt;j;
+            if(find(i)!&#x3D;find(j))&#123;
+                s[find(j)]+&#x3D;s[find(i)];
+                p[find(i)]&#x3D;find(j);
+            &#125;
+        &#125;
+        for(int i&#x3D;1;i&lt;&#x3D;n;i++)&#123;
+            printf(&quot;%d &quot;,s[find(i)]);
+        &#125;
+        puts(&quot; &quot;);
+    &#125;
+    return 0;
+&#125;</code></pre>
+
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:daydream0929@gmail.com">冯振军</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://daydream0929.cn/2021/05/29/Acwing%E7%AC%AC%E4%B8%80%E5%9C%BA%E5%91%A8%E8%B5%9B/">http://daydream0929.cn/2021/05/29/Acwing第一场周赛/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://daydream0929.cn" target="_blank">冯振军的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/myself/photo/AcWing.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#3577-%E9%80%89%E6%8B%A9%E6%95%B0%E5%AD%97"><span class="toc-number">1.</span> <span class="toc-text">3577.选择数字</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.0.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.0.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="toc-number">1.0.4.</span> <span class="toc-text">数据范围</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B1%EF%BC%9A"><span class="toc-number">1.0.5.</span> <span class="toc-text">输入样例1：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B1%EF%BC%9A"><span class="toc-number">1.0.6.</span> <span class="toc-text">输出样例1：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B2%EF%BC%9A"><span class="toc-number">1.0.7.</span> <span class="toc-text">输入样例2：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B2%EF%BC%9A"><span class="toc-number">1.0.8.</span> <span class="toc-text">输出样例2：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B3%EF%BC%9A"><span class="toc-number">1.0.9.</span> <span class="toc-text">输入样例3：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B3%EF%BC%9A"><span class="toc-number">1.0.10.</span> <span class="toc-text">输出样例3：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90"><span class="toc-number">1.0.11.</span> <span class="toc-text">题目分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-%E4%BB%A3%E7%A0%81"><span class="toc-number">1.0.12.</span> <span class="toc-text">C++ 代码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3578-%E6%9C%80%E5%A4%A7%E4%B8%AD%E4%BD%8D%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">3578.最大中位数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">2.0.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-1"><span class="toc-number">2.0.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-1"><span class="toc-number">2.0.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4-1"><span class="toc-number">2.0.4.</span> <span class="toc-text">数据范围</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B1%EF%BC%9A-1"><span class="toc-number">2.0.5.</span> <span class="toc-text">输入样例1：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B1%EF%BC%9A-1"><span class="toc-number">2.0.6.</span> <span class="toc-text">输出样例1：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B2%EF%BC%9A-1"><span class="toc-number">2.0.7.</span> <span class="toc-text">输入样例2：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B2%EF%BC%9A-1"><span class="toc-number">2.0.8.</span> <span class="toc-text">输出样例2：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B3%EF%BC%9A-1"><span class="toc-number">2.0.9.</span> <span class="toc-text">输入样例3：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B3%EF%BC%9A-1"><span class="toc-number">2.0.10.</span> <span class="toc-text">输出样例3：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%B3%951"><span class="toc-number">2.0.11.</span> <span class="toc-text">算法1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%AA%E5%BF%83-%E5%B7%A6%E5%8F%B3%E6%8C%87%E9%92%88-O-nlog-n"><span class="toc-number">2.0.12.</span> <span class="toc-text">(贪心+左右指针)  $O(nlog n)$</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-%E4%BB%A3%E7%A0%81-1"><span class="toc-number">2.0.13.</span> <span class="toc-text">C++ 代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%B3%952"><span class="toc-number">2.0.14.</span> <span class="toc-text">算法2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%88%86-O-nlong-n"><span class="toc-number">2.0.15.</span> <span class="toc-text">(二分)  $O(nlong n)$</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81"><span class="toc-number">2.0.16.</span> <span class="toc-text">参考代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-%E4%BB%A3%E7%A0%81-2"><span class="toc-number">2.0.17.</span> <span class="toc-text">C++ 代码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3579-%E7%A7%BB%E5%8A%A8%E6%95%B0%E5%AD%97"><span class="toc-number">3.</span> <span class="toc-text">3579.移动数字</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">3.1.</span> <span class="toc-text">题目描述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-2"><span class="toc-number">3.1.1.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-2"><span class="toc-number">3.1.2.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4-2"><span class="toc-number">3.1.3.</span> <span class="toc-text">数据范围</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B"><span class="toc-number">3.1.4.</span> <span class="toc-text">样例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">3.1.5.</span> <span class="toc-text">输入样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">3.1.6.</span> <span class="toc-text">输出样例：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%951-1"><span class="toc-number">3.2.</span> <span class="toc-text">算法1</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86%E6%B1%82%E8%BF%9E%E9%80%9A%E5%9D%97%E4%B8%AA%E6%95%B0"><span class="toc-number">3.2.0.1.</span> <span class="toc-text">(并查集求连通块个数)</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">3.2.1.</span> <span class="toc-text">参考文献</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-%E4%BB%A3%E7%A0%81-3"><span class="toc-number">3.2.2.</span> <span class="toc-text">C++ 代码</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('/myself/photo/AcWing.png')"><div id="footer-wrap"><div class="copyright">&copy;2021 By 冯振军</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my blog !</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    loader: {
+      source: {
+        '[tex]/amsCd': '[tex]/amscd'
+      }
+    },
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        addClass: [200,() => {
+          document.querySelectorAll('mjx-container:not([display=\'true\']').forEach( node => {
+            const target = node.parentNode
+            if (!target.classList.contains('has-jax')) {
+              target.classList.add('mathjax-overflow')
+            }
+          })
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script></div><div class="aplayer" data-id="713286414" data-server="netease" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener toc scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
